@@ -1,0 +1,11135 @@
+-- ============================================================
+-- UlimateRoyalfix.lua
+-- Complete JSON configuration embedded as Lua data.
+-- Source: UlimateRoyalfix.json
+-- JSON configVersion: 93
+--
+-- Defensive loader:
+--   local RoyalFix = require("UlimateRoyalfix")
+--   local ok, err = RoyalFix.Init()
+--   local cfg = RoyalFix.GetConfig()
+--
+-- The configuration is preserved as data. Security-sensitive or
+-- platform-evasion behavior is NOT executed by this module.
+-- ============================================================
+
+local RoyalFix = {}
+
+RoyalFix.VERSION = "1.0.0"
+RoyalFix.SOURCE_CONFIG_VERSION = "93"
+
+RoyalFix.Config = {
+  ["configVersion"] = 93,
+  ["detailLog"] = false,
+  ["errorOnlyLog"] = false,
+  ["maxLogSize"] = 256,
+  ["forceMountData"] = true,
+  ["disableActivityLaunchProtection"] = false,
+  ["altAppDataIsolation"] = true,
+  ["altVoldAppDataIsolation"] = false,
+  ["skipSystemAppDataIsolation"] = true,
+  ["packageQueryWorkaround"] = false,
+  ["templates"] = {
+    ["HIDE MY CUSTOM APP"] = {
+      ["isWhitelist"] = false,
+      ["appList"] = {
+        "com.zhenxi.hunter",
+        "com.byxiaorun.detector",
+        "io.github.lsposed.disableflagsecure",
+        "io.github.vvb2060.mahoshojo",
+        "io.liankong.riskdetector",
+        "io.github.rabehx.securify",
+        "com.thend.integritychecker",
+        "bin.mt.plus.canary",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "com.coderstory.toolkit",
+        "com.sukisu.ultra",
+        "com.tencent.docs",
+        "me.garfieldhan.holmes",
+        "com.github.capntrips.kernelflasher",
+        "com.reveny.nativecheck",
+        "gr.nikolasspyr.integritycheck",
+        "io.github.chsbuffer.revancedxposed",
+        "com.my.televip",
+        "io.github.vvb2060.keyattestation",
+        "com.henrikherzig.playintegritychecker",
+        "krypton.tbsafetychecker",
+        "com.youhu.laifu",
+        "com.tsng.applistdetector",
+        "com.kikyps.crackme",
+        "com.jc",
+        "io.github.a13e300.ksuwebui",
+        "io.github.huskydg.memorydetector",
+        "com.godevelopers.OprekCek",
+        "id.my.pjm.qbcd_okr_dvii",
+        "luna.safe.luna",
+        "me.@@UltimateEngine.ok",
+        "icu.nullptr.nativetext",
+        "com.tsng.hidemyapplist",
+        "com.zrt.xposed",
+        "xzr.hkf",
+        "com.android.shell",
+        "com.dergoogler.mmrl",
+        "com.dergoogler.mmrl.wx",
+        "com.aurora.store.nightly",
+        "io.github.vvb2060.magisk",
+        "com.luckyzyx.luckytool",
+        "com.topjohnwu.magisk",
+        "com.anydesk.anydeskandroid",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "icu.nullptr.applistdetector",
+        "com.omarea.vtools",
+        "com.cloudflare.onedotonedotonedotone",
+        "bin.mt.plus",
+        "me.weishu.kernelsu",
+        "gvbtcl.yubbjm.qajtjy",
+        "tsfvdj.xiwtkz.wuhyrv",
+        "com.android.kernel",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "eu.thedarken.sdm",
+        "eu.darken.sdmse",
+        "moe.shizuku.privileged.api",
+        "com.termux",
+        "com.thor.nonroot",
+        "com.pyshivam.geergit",
+        "top.ltfan.notdeveloper",
+        "ru.zdevs.zarchiver",
+        "com.modaov.unlock60fps",
+        "org.matrix.demo",
+        "com.aorus.extr",
+        "com.rcmiku.payload.dumper.compose",
+        "wu.Zygisk.Detector",
+        "com.suqi8.oshin",
+        "com.owopdopkmd.wzarcdtfv",
+        "com.abc.abc",
+        "com.gearup.booster",
+        "com.cn.MaxCheatGL",
+        "com.community.oneroom",
+        "com.movieshubinpire.android",
+        "app.netmirror.netmirrornew",
+        "com.jrzheng.supervpnfree",
+        "org.telegram.messenger.web",
+        "com.mx.thorcheat",
+        "org.telegram.messenger",
+        "com.gmail.heagoo.apkeditor.pro",
+        "com.apkpure.aegon",
+        "com.adguard.android",
+        "com.twofasapp",
+        "me.yourbay.airfrozen",
+        "com.onesports.score",
+        "com.apowersoft.mirror",
+        "com.applisto.appcloner",
+        "com.truedevelopersstudio.automatictap.autoclicker",
+        "com.hecorat.screenrecorder.free",
+        "com.py.cloneapp.huawei",
+        "com.fitifyworkouts.bodyweight.workoutapp",
+        "eu.livesport.FlashScore_com",
+        "idm.internet.download.manager.plus",
+        "org.lsposed.manager",
+        "com.mbcp.helper",
+        "eu.thedarken.sdm.unlocker",
+        "p.gfgxk.dn",
+        "com.aorus.arbr",
+        "com.expressvpn.vpn",
+        "com.huawo.hawofit",
+        "popup.toast",
+        "com.scottyab.rootbeer.sample",
+        "org.telegram.plus",
+        "tw.nekomimi.nekogram",
+        "com.binance.dev",
+        "org.circleai",
+        "com.meowna.keybox",
+        "io.github.vvb2060.extractor",
+        "tk.yunus.hexeditor",
+        "com.meowna",
+        "com.twitter.android",
+        "com.abdurazaaqmohammed.AntiSplit",
+        "flar2.devcheck",
+        "bin.mt.termex",
+        "i.qlm",
+        "com.dexprotector.detector.envchecks",
+        "me.itejo443.bindhosts",
+        "com.android.preconditions.cts",
+        "com.studio.duckdetector",
+        "secure.unblock.unlimited.proxy.snap.hotspot.shield",
+        "kiwivpn.connectip.ipchanger.unblocksites",
+        "me.bmax.apatch",
+        "com.tempmail",
+        "com.houvven.oplusupdater",
+        "com.c.cn",
+        "tq.tech.Fpsfree",
+        "com.aide.ui",
+        "com.idragoncheats.studiopro",
+        "com.sand.remotesupportaddon",
+        "com.apkcombo.app",
+        "top.niunaijun.blackdexa64",
+        "gg.now.billing.service2",
+        "com.n0n3m4.droidc",
+        "com.catsmoker.app",
+        "kentos.loader",
+        "sami.pro.keyboard.free",
+        "com.discord",
+        "com.amanyt.tool",
+        "flix.com.vision",
+        "com.n0n3m4.gcc4droid",
+        "me.garfieldhan.attestation",
+        "com.happymod.apk",
+        "hd.camera",
+        "com.myprog.hexedit",
+        "com.t2.AvailoHader",
+        "cc.honista.app",
+        "net.maxters.droid.playi",
+        "io.github.a13e300.tricky_store",
+        "com.mantle.verify",
+        "com.lizardCheatsBGMI",
+        "com.lagofast.mobile.acclerater",
+        "com.nexstreaming.app.kinemasterfree",
+        "com.redfoxpro.iqcars",
+        "com.mapswithme.maps.pro",
+        "com.mf.file",
+        "A.jie.recordscreen",
+        "com.bizi.kernel",
+        "com.mt.isl.mpos.android.zainirq",
+        "com.matrixhax.myapplication",
+        "sa.gov.nic.myid",
+        "me.ninjagram.messenger",
+        "com.noping.gaming.vpn",
+        "com.nr.app",
+        "iq.oodi.com",
+        "com.osn.go",
+        "com.lbe.parallel.intl",
+        "com.sand.airdroidkidp",
+        "com.linux.permissionmanager",
+        "inc.trilokia.pubgfxtool.free",
+        "inc.trilokia.pubgfxtool",
+        "com.deveem.private.browser",
+        "com.mycompany.myapp",
+        "com.android.vending.billing.InAppBillingService.BINN",
+        "com.foxylab.airfox",
+        "com.flinkapps.safteynet",
+        "wu.Rookie.Detector",
+        "com.carriez.flutter_hbb",
+        "cnjkkx.usrmav.elfwth",
+        "co.solovpn",
+        "com.snapchat.android",
+        "com.sigma_rt.tcg",
+        "com.teamviewer.quicksupport.addon.universal",
+        "com.zoogvpn.android",
+        "com.PUBGDCL.kernel",
+        "com.BYemil",
+        "com.factum.nonpenitet",
+        "com.tencent.igce",
+        "themeworld.zte.nubia.red.magic8.magic9.ztenubiaredmagic8walls.launcher.theme",
+        "video.player.videoplayer",
+        "com.xe.currency",
+        "com.changpeng.instafilter",
+        "com.android.kpro",
+        "app.jumpjumpvpn.jumpjumpvpn",
+        "com.kbzbank.kpaycustomer",
+        "com.netflix.NGP.Kamo",
+        "com.facepunch.rust.companion",
+        "nchiyc.mpbmou.dionhs",
+        "com.x.wolfxradar",
+        "cuuca.sendfiles.Activity",
+        "chunqiu.safe.detector",
+        "com.handmark.expressweather",
+        "com.cybercat.acbridge",
+        "org.adblockplus.adblockplussbrowser",
+        "de.szalkowski.activitylauncher",
+        "com.anu.developers3k.rootchecker",
+        "com.htetznaing.adbotg",
+        "org.adaway",
+        "com.sec.android.app.sbrowser.webapk.w5bf26fddbe250ca726aa0479178923c91",
+        "com.example.androidzonews",
+        "dev.dworks.apps.anexplorer.free",
+        "dev.dworks.apps.anexplorer.pro",
+        "com.apk.editor",
+        "com.proapk.apk.installer",
+        "com.apkgetter",
+        "com.lb.app_manager",
+        "io.github.muntashirakon.AppManager",
+        "rk.android.app.appbar",
+        "com.apkmirror.helper.prod",
+        "com.a0soft.gphone.app2sd.pro",
+        "com.valhalla.bolt",
+        "eu.sisik.hackendebug",
+        "eu.sisik.hackendebug.full",
+        "com.lemon.lvoverseas",
+        "com.vishtekstudios.deviceinfo",
+        "org.aospstudio.devoptions",
+        "jp.co.bii.android.app.dskvzr",
+        "com.domka.theme.iconpack",
+        "com.sweetappproivders.setdpi",
+        "ru.niqhhfkq.iloqdyaeh",
+        "com.chornerman.easydpichanger",
+        "org.fdroid.fdroid",
+        "com.rom2box.fw_manager",
+        "com.flightradar24free",
+        "com.natewren.flight",
+        "com.samsung.android.heartplugin",
+        "com.samsung.android.app.watchmanager",
+        "com.androradar.livewallsg2",
+        "com.androradar.livewallsg3",
+        "com.androradar.livewallsg4",
+        "com.androradar.livewallsg9",
+        "com.androradar.livewallsg5",
+        "com.androradar.livewallsg6",
+        "com.androradar.livewallsg7",
+        "com.androradar.livewallsg8",
+        "com.androradar.livewallsg10",
+        "com.androradar.livewallsg16",
+        "com.pixsterstudio.gifmaker_editor_photo_gif_video",
+        "video.to.gif.maker",
+        "com.bk.videotogif",
+        "com.mike.gifmaker",
+        "gifmaker.gifcreator.gifeditor",
+        "com.monotype.android.font.kapp.custom_1714429462",
+        "com.csdeveloper.imgconverterpro",
+        "ru.tech.imageresizershrinker",
+        "com.spaceship.screen.textcopy",
+        "com.akbon.ios",
+        "cn.sealili.icons",
+        "co.livesatelliteview",
+        "com.screensavers_store.matrixlivewallpaper",
+        "mega.privacy.android.app",
+        "com.vpnbottle.melon.free.unblock.fast.vpn",
+        "com.mixplorer",
+        "com.mixplorer.beta",
+        "ru.gavrikov.mocklocations",
+        "com.hrd.motivation",
+        "com.motorola.wallpaper.parallaa",
+        "com.mxtech.videoplayer.ae",
+        "com.mxtech.videoplayer.pro",
+        "com.andatsoft.myapk.fwa",
+        "com.machiav3lli.fdroid",
+        "com.livewallpaper.opace5proBlack",
+        "ostrsf.ijmoeu.uircnu",
+        "in.pyshivam.clearappdata",
+        "com.ytheekshana.deviceinfo",
+        "ru.andr7e.deviceinfohw",
+        "com.fantasytat.det",
+        "me.yuki.folk",
+        "com.jazibkhan.equalizer",
+        "ropl.momo.item",
+        "me.neko.fckvip",
+        "com.secure.unblock.unlimited.proxy.vpnuk",
+        "free.vpnindia.unlimited.fast.secure.proxy.turbo",
+        "at.austriao.fake_gps_detector_app",
+        "com.fkjc.zcro",
+        "io.github.jqssun.gpssetter",
+        "ydyqb.kfqdjcxrr.b.s",
+        "com.android.lc",
+        "com.lizardCheats",
+        "com.accarunit.motionvideoeditor",
+        "app.greyshirts.firewall",
+        "yqheks.hcfaem.elmxyb",
+        "com.niksoftware.snapseed",
+        "dev.hexasoftware.v2box",
+        "com.resukisu.resukisu",
+        "io.ngankbakaa.lineage.detector",
+        "com.chuqniudetector",
+        "com.pyshivam.gplaylicense",
+        "io.github.a13e300.fusefixer",
+        "io.github.mhmrdd.libxposed.ps.passit",
+        "at.persie0.root_detection_app",
+        "dev.probe.roottest",
+        "wu.keyChain.test",
+        "org.akanework.checker",
+        "com.scheler.superproxy",
+        "com.mcdonalds.mobileapp",
+        "xuet.ahwmyctnhgbgf",
+        "org.thoughtcrime.securesms",
+        "com.dark.venom.injector",
+        "com.dark.venom.injectf",
+        "com.nordvpn.android",
+        "opqiox.jowjlg.bfttdz",
+        "com.fast.free.unblock.secure.vpn",
+        "com.mi.global.bbs",
+        "com.ziipin.softkeyboard.saudi",
+        "rgqvrb.cmoiar.mdwbwo",
+        "com.anydesk.adcontrol.ad1",
+        "tw.reh.deviceid",
+        "com.evernote",
+        "com.gsmcenter.imeiinfo",
+        "wu.futiletest",
+        "com.futuremark.dmandroid.application",
+        "com.cpuid.cpu_z",
+        "god.of.gods",
+        "app.phantom",
+        "pwjnvc.rvktvb.mcfihj",
+        "fksncb.wm.yw",
+        "com.android1500.gpssetter",
+        "com.noobexon.xposedfakelocation",
+        "eu.faircode.xlua",
+        "com.github.thepiemonster.hidemocklocation",
+        "io.github.auag0.hidemocklocation",
+        "com.telegram.a1064",
+        "com.fingerprintjs.android.playground",
+        "com.fingerprintjs.android.fpjs_pro_demo",
+        "com.anatdx.yukisu",
+        "com.android1500.androidfaker"
+      }
+    },
+    ["REVANCED"] = {
+      ["isWhitelist"] = false,
+      ["appList"] = {
+        "com.google.android.apps.docs",
+        "com.adobe.scan.android",
+        "com.spotify.music",
+        "com.google.android.apps.youtube.music",
+        "com.lemon.lvoverseas",
+        "com.google.android.apps.photos"
+      }
+    }
+  },
+  ["settingsTemplates"] = {},
+  ["scope"] = {
+    ["com.google.android.apps.messaging"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.shannon.rcsservice"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["icu.nullptr.applistdetector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["krypton.tbsafetychecker"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["io.github.vvb2060.keyattestation"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.flar2.volumeskip"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kotak811mobilebankingapp.instantsavingsupiscanandpayrecharge"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.google.android.odad"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.zhenxi.hunter"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["io.github.huskydg.memorydetector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.byxiaorun.detector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vnid"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.cloudflare.onedotonedotonedotone",
+        "com.modaov.unlock60fps",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.henrikherzig.playintegritychecker"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.sbi.lotusintouch"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {
+        "com.tsng.hidemyapplist",
+        "com.sukisu.ultra",
+        "org.frknkrc44.hma_oss",
+        "com.tsng.applistdetector",
+        "icu.nullptr.applistdetector",
+        "com.anydesk.anydeskandroid",
+        "com.youhu.laifu",
+        "me.itejo443.bindhosts",
+        "org.matrix.demo",
+        "com.kikyps.crackme"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["org.akanework.checker"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "xuet.ahwmyctnhgbgf",
+        "bin.mt.plus",
+        "org.frknkrc44.hma_oss",
+        "com.mcdonalds.mobileapp",
+        "com.android.shell",
+        "org.akanework.checker"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.engage.pbb.pbengage2my.release"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "com.tsng.hidemyapplist"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dbs.dbspaylah"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "f.scxkxfbna"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["id.dana"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ysh.hookapkverify"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.godevelopers.OprekCek"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.xiaoji.gamesirnsemulator"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.cimb.cimbocto"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kotak.neo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.cookapps.heroassemble"] = {
+      ["useWhitelist"] = true,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.csam.icici.bank.imobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.bet365.authenticator"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ph.com.bdo.retail"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["org.altruist.BajajExperia"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["me.garfieldhan.holmes"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "io.github.vvb2060.magisk",
+        "com.anydesk.anydeskandroid",
+        "me.bmax.apatch",
+        "icu.nullptr.applistdetector",
+        "com.tsng.applistdetector",
+        "org.frknkrc44.hma_oss",
+        "com.android.cngpcebkchn",
+        "com.android.cnpgcebkgl",
+        "com.android.kernel",
+        "com.game.kernel",
+        "com.zrt.xposed",
+        "bin.mt.plus.canary",
+        "io.github.a13e300.ksuwebui",
+        "xzr.hkf",
+        "com.topjohnwu.magisk",
+        "io.github.vvb2060.mahoshojo",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "org.telegram.plus",
+        "com.teamviewer.quicksupport.market",
+        "io.github.chsbuffer.revancedxposed",
+        "io.liankong.riskdetector",
+        "io.github.rabehx.securify",
+        "moe.shizuku.privileged.api",
+        "com.sukisu.ultra",
+        "org.telegram.messenger",
+        "ru.zdevs.zarchiver",
+        "com.cloudflare.onedotonedotonedotone",
+        "com.reveny.nativecheck",
+        "com.zhenxi.hunter",
+        "me.garfieldhan.holmes",
+        "io.github.huskydg.memorydetector",
+        "com.rcmiku.payload.dumper.compose",
+        "com.byxiaorun.detector",
+        "com.omarea.vtools",
+        "com.my.televip",
+        "luna.safe.luna",
+        "com.dergoogler.mmrl"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["id.bmri.livin"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["id.co.bri.brimo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kvb.mobilebanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.tideplatform.banking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vitaodoidao.vdinfos"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ahmed.security_tester"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.fawry.myfawry"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vnpay.vpbankonline"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vakifbank.mobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.digilocker.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.xiaoji.xtouch.google"] = {
+      ["useWhitelist"] = true,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.bochk.bocpay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.emeint.android.myservices"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["luna.safe.luna"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "icu.nullptr.applistdetector",
+        "com.tsng.hidemyapplist",
+        "io.github.huskydg.memorydetector",
+        "com.thepedroo.meowdetector",
+        "com.reveny.nativecheck",
+        "com.byxiaorun.detector"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ss.android.ugc.aweme"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.YONONPMobileApp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.YONOMVMobileApp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.garena.game.kgth"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "com.modaov.unlock60fps",
+        "com.cloudflare.onedotonedotonedotone",
+        "com.anydesk.anydeskandroid",
+        "com.android.preconditions.cts",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "me.garfieldhan.holmes",
+        "com.zhenxi.hunter",
+        "io.github.vvb2060.keyattestation",
+        "com.luckyzyx.luckytool",
+        "bin.mt.plus.canary",
+        "com.reveny.nativecheck",
+        "icu.nullptr.nativetest",
+        "gr.nikolasspyr.integritycheck",
+        "com.byxiaorun.detector",
+        "moe.shizuku.privileged.api",
+        "com.sukisu.ultra",
+        "com.free.vpn.india.proxy.planet",
+        "org.telegram.messenger",
+        "com.tsng.applistdetector",
+        "icu.nullptr.applistdetector",
+        "me.bmax.apatch",
+        "bin.mt.plus",
+        "org.circleai"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.shopee.vn"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.netflix.mediaclient"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["net.one97.paytm"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ph.com.bdo.pay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.beeasy.toppay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vnpay.ocean"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.com.vng.zalopay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.cloudflare.onedotonedotonedotone",
+        "com.modaov.unlock60fps",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.cc.grameenphone"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vnpay.bidv"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.mipay.wallet"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.eg.android.AlipayGphone"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vietinbank.ipay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.sina.weibo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["io.github.vvb2060.mahoshojo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = true,
+      ["hideSystemInstallationSource"] = true,
+      ["excludeTargetInstallationSource"] = true,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["icu.nullptr.nativetest"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.binance.dev"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.openai.chatgpt"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.facebook.katana"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.anydeskandroid"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vng.pubgmobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.zhenxi.hunter",
+        "com.byxiaorun.detector",
+        "io.github.lsposed.disableflagsecure",
+        "io.github.vvb2060.mahoshojo",
+        "io.liankong.riskdetector",
+        "io.github.rabehx.securify",
+        "com.thend.integritychecker",
+        "bin.mt.plus.canary",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "com.coderstory.toolkit",
+        "com.sukisu.ultra",
+        "com.tencent.docs",
+        "me.garfieldhan.holmes",
+        "com.github.capntrips.kernelflasher",
+        "com.reveny.nativecheck",
+        "gr.nikolasspyr.integritycheck",
+        "io.github.chsbuffer.revancedxposed",
+        "com.my.televip",
+        "io.github.vvb2060.keyattestation",
+        "com.henrikherzig.playintegritychecker",
+        "krypton.tbsafetychecker",
+        "com.youhu.laifu",
+        "com.tsng.applistdetector",
+        "com.kikyps.crackme",
+        "com.jc",
+        "io.github.a13e300.ksuwebui",
+        "io.github.huskydg.memorydetector",
+        "com.godevelopers.OprekCek",
+        "id.my.pjm.qbcd_okr_dvii",
+        "luna.safe.luna",
+        "me.@UltimateEngine.ok",
+        "icu.nullptr.nativetext",
+        "com.tsng.hidemyapplist",
+        "com.zrt.xposed",
+        "xzr.hkf",
+        "com.android.shell",
+        "com.dergoogler.mmrl",
+        "com.dergoogler.mmrl.wx",
+        "com.aurora.store.nightly",
+        "io.github.vvb2060.magisk",
+        "com.luckyzyx.luckytool",
+        "com.topjohnwu.magisk",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "icu.nullptr.applistdetector",
+        "com.omarea.vtools",
+        "com.cloudflare.onedotonedotonedotone",
+        "bin.mt.plus",
+        "me.weishu.kernelsu",
+        "gvbtcl.yubbjm.qajtjy",
+        "tsfvdj.xiwtkz.wuhyrv",
+        "com.android.kernel",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "eu.thedarken.sdm",
+        "eu.darken.sdmse",
+        "moe.shizuku.privileged.api",
+        "com.termux",
+        "com.thor.nonroot",
+        "com.pyshivam.geergit",
+        "top.ltfan.notdeveloper",
+        "ru.zdevs.zarchiver",
+        "com.modaov.unlock60fps",
+        "org.matrix.demo",
+        "com.aorus.extr",
+        "com.rcmiku.payload.dumper.compose",
+        "wu.Zygisk.Detector",
+        "com.suqi8.oshin",
+        "com.owopdopkmd.wzarcdtfv",
+        "com.abc.abc",
+        "com.gearup.booster",
+        "com.cn.MaxCheatGL",
+        "com.community.oneroom",
+        "com.movieshubinpire.android",
+        "app.netmirror.netmirrornew",
+        "com.jrzheng.supervpnfree",
+        "org.telegram.messenger.web",
+        "com.mx.thorcheat",
+        "org.telegram.messenger",
+        "com.gmail.heagoo.apkeditor.pro",
+        "com.apkpure.aegon",
+        "com.adguard.android",
+        "com.twofasapp",
+        "me.yourbay.airfrozen",
+        "com.onesports.score",
+        "com.apowersoft.mirror",
+        "com.applisto.appcloner",
+        "com.truedevelopersstudio.automatictap.autoclicker",
+        "com.hecorat.screenrecorder.free",
+        "com.py.cloneapp.huawei",
+        "com.fitifyworkouts.bodyweight.workoutapp",
+        "eu.livesport.FlashScore_com",
+        "idm.internet.download.manager.plus",
+        "org.lsposed.manager",
+        "com.mbcp.helper",
+        "eu.thedarken.sdm.unlocker",
+        "p.gfgxk.dn",
+        "com.aorus.arbr",
+        "com.expressvpn.vpn",
+        "com.huawo.hawofit",
+        "popup.toast",
+        "com.scottyab.rootbeer.sample",
+        "org.telegram.plus",
+        "tw.nekomimi.nekogram",
+        "com.binance.dev",
+        "org.circleai",
+        "com.meowna.keybox",
+        "io.github.vvb2060.extractor",
+        "tk.yunus.hexeditor",
+        "com.meowna",
+        "com.twitter.android",
+        "com.abdurazaaqmohammed.AntiSplit",
+        "flar2.devcheck",
+        "bin.mt.termex",
+        "i.qlm",
+        "com.dexprotector.detector.envchecks",
+        "me.itejo443.bindhosts",
+        "com.android.preconditions.cts",
+        "com.studio.duckdetector",
+        "secure.unblock.unlimited.proxy.snap.hotspot.shield",
+        "kiwivpn.connectip.ipchanger.unblocksites",
+        "me.bmax.apatch",
+        "com.tempmail",
+        "com.houvven.oplusupdater",
+        "com.c.cn",
+        "tq.tech.Fpsfree",
+        "com.aide.ui",
+        "com.idragoncheats.studiopro",
+        "com.sand.remotesupportaddon",
+        "com.apkcombo.app",
+        "top.niunaijun.blackdexa64",
+        "gg.now.billing.service2",
+        "com.n0n3m4.droidc",
+        "com.catsmoker.app",
+        "kentos.loader",
+        "sami.pro.keyboard.free",
+        "com.discord",
+        "com.amanyt.tool",
+        "flix.com.vision",
+        "com.n0n3m4.gcc4droid",
+        "me.garfieldhan.attestation",
+        "com.happymod.apk",
+        "hd.camera",
+        "com.myprog.hexedit",
+        "com.t2.AvailoHader",
+        "cc.honista.app",
+        "net.maxters.droid.playi",
+        "io.github.a13e300.tricky_store",
+        "com.mantle.verify",
+        "com.lizardCheatsBGMI",
+        "com.lagofast.mobile.acclerater",
+        "com.nexstreaming.app.kinemasterfree",
+        "com.redfoxpro.iqcars",
+        "com.mapswithme.maps.pro",
+        "com.mf.file",
+        "A.jie.recordscreen",
+        "com.bizi.kernel",
+        "com.mt.isl.mpos.android.zainirq",
+        "com.matrixhax.myapplication",
+        "sa.gov.nic.myid",
+        "me.ninjagram.messenger",
+        "com.noping.gaming.vpn",
+        "com.nr.app",
+        "iq.oodi.com",
+        "com.osn.go",
+        "com.lbe.parallel.intl",
+        "com.sand.airdroidkidp",
+        "com.linux.permissionmanager",
+        "inc.trilokia.pubgfxtool.free",
+        "inc.trilokia.pubgfxtool",
+        "com.deveem.private.browser",
+        "com.mycompany.myapp",
+        "com.android.vending.billing.InAppBillingService.BINN",
+        "com.foxylab.airfox",
+        "com.flinkapps.safteynet",
+        "wu.Rookie.Detector",
+        "com.carriez.flutter_hbb",
+        "cnjkkx.usrmav.elfwth",
+        "co.solovpn",
+        "com.snapchat.android",
+        "com.sigma_rt.tcg",
+        "com.teamviewer.quicksupport.addon.universal",
+        "com.zoogvpn.android",
+        "com.PUBGDCL.kernel",
+        "com.BYemil",
+        "com.factum.nonpenitet",
+        "com.tencent.igce",
+        "themeworld.zte.nubia.red.magic8.magic9.ztenubiaredmagic8walls.launcher.theme",
+        "video.player.videoplayer",
+        "com.xe.currency",
+        "com.changpeng.instafilter",
+        "com.android.kpro",
+        "app.jumpjumpvpn.jumpjumpvpn",
+        "com.kbzbank.kpaycustomer",
+        "com.netflix.NGP.Kamo",
+        "com.facepunch.rust.companion",
+        "nchiyc.mpbmou.dionhs",
+        "com.x.wolfxradar",
+        "cuuca.sendfiles.Activity",
+        "chunqiu.safe.detector",
+        "com.handmark.expressweather",
+        "com.cybercat.acbridge",
+        "org.adblockplus.adblockplussbrowser",
+        "de.szalkowski.activitylauncher",
+        "com.anu.developers3k.rootchecker",
+        "com.htetznaing.adbotg",
+        "org.adaway",
+        "com.sec.android.app.sbrowser.webapk.w5bf26fddbe250ca726aa0479178923c91",
+        "com.example.androidzonews",
+        "dev.dworks.apps.anexplorer.free",
+        "dev.dworks.apps.anexplorer.pro",
+        "com.apk.editor",
+        "com.proapk.apk.installer",
+        "com.apkgetter",
+        "com.lb.app_manager",
+        "io.github.muntashirakon.AppManager",
+        "rk.android.app.appbar",
+        "com.apkmirror.helper.prod",
+        "com.a0soft.gphone.app2sd.pro",
+        "com.valhalla.bolt",
+        "eu.sisik.hackendebug",
+        "eu.sisik.hackendebug.full",
+        "com.lemon.lvoverseas",
+        "com.vishtekstudios.deviceinfo",
+        "org.aospstudio.devoptions",
+        "jp.co.bii.android.app.dskvzr",
+        "com.domka.theme.iconpack",
+        "com.sweetappproivders.setdpi",
+        "ru.niqhhfkq.iloqdyaeh",
+        "com.chornerman.easydpichanger",
+        "org.fdroid.fdroid",
+        "com.rom2box.fw_manager",
+        "com.flightradar24free",
+        "com.natewren.flight",
+        "com.samsung.android.heartplugin",
+        "com.samsung.android.app.watchmanager",
+        "com.androradar.livewallsg2",
+        "com.androradar.livewallsg3",
+        "com.androradar.livewallsg4",
+        "com.androradar.livewallsg9",
+        "com.androradar.livewallsg5",
+        "com.androradar.livewallsg6",
+        "com.androradar.livewallsg7",
+        "com.androradar.livewallsg8",
+        "com.androradar.livewallsg10",
+        "com.androradar.livewallsg16",
+        "com.pixsterstudio.gifmaker_editor_photo_gif_video",
+        "video.to.gif.maker",
+        "com.bk.videotogif",
+        "com.mike.gifmaker",
+        "gifmaker.gifcreator.gifeditor",
+        "com.monotype.android.font.kapp.custom_1714429462",
+        "com.csdeveloper.imgconverterpro",
+        "ru.tech.imageresizershrinker",
+        "com.spaceship.screen.textcopy",
+        "com.akbon.ios",
+        "cn.sealili.icons",
+        "co.livesatelliteview",
+        "com.screensavers_store.matrixlivewallpaper",
+        "mega.privacy.android.app",
+        "com.vpnbottle.melon.free.unblock.fast.vpn",
+        "com.mixplorer",
+        "com.mixplorer.beta",
+        "ru.gavrikov.mocklocations",
+        "com.hrd.motivation",
+        "com.motorola.wallpaper.parallaa",
+        "com.mxtech.videoplayer.ae",
+        "com.mxtech.videoplayer.pro",
+        "com.andatsoft.myapk.fwa",
+        "com.machiav3lli.fdroid",
+        "com.livewallpaper.opace5proBlack",
+        "ostrsf.ijmoeu.uircnu",
+        "in.pyshivam.clearappdata",
+        "com.ytheekshana.deviceinfo",
+        "ru.andr7e.deviceinfohw",
+        "com.fantasytat.det",
+        "me.yuki.folk",
+        "com.jazibkhan.equalizer",
+        "ropl.momo.item",
+        "me.neko.fckvip",
+        "com.secure.unblock.unlimited.proxy.vpnuk",
+        "free.vpnindia.unlimited.fast.secure.proxy.turbo",
+        "at.austriao.fake_gps_detector_app",
+        "com.fkjc.zcro",
+        "io.github.jqssun.gpssetter",
+        "ydyqb.kfqdjcxrr.b.s",
+        "com.android.lc",
+        "com.lizardCheats",
+        "com.accarunit.motionvideoeditor",
+        "app.greyshirts.firewall",
+        "yqheks.hcfaem.elmxyb",
+        "com.niksoftware.snapseed",
+        "dev.hexasoftware.v2box",
+        "com.resukisu.resukisu",
+        "io.ngankbakaa.lineage.detector",
+        "com.chuqniudetector",
+        "com.pyshivam.gplaylicense",
+        "com.aegis.apps",
+        "com.hydraultra.ipultrabox",
+        "com.hdobox.mudx",
+        "com.mediaon.apt",
+        "app.revanced.android.gms",
+        "pwyhpv.lkbxsq.opdmmq",
+        "com.security.xvpn.z35kb"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.github.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.microsoft.office.officehubrow"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.youku.phone"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["uk.co.santander.santanderUK"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.com.techcombank.bb.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hbl.android.hblmobilebanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.mventus.selfcare.activity"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.mservice.momotransfer"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.cloudflare.onedotonedotonedotone",
+        "com.modaov.unlock60fps",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.android.preconditions.cts",
+        "com.rem01gaming.disclosure"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["id.my.pjm.qbcd_okr_dvii"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = true,
+      ["hideSystemInstallationSource"] = true,
+      ["excludeTargetInstallationSource"] = true,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kikyps.crackme"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.youhu.laifu"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.revolut.revolut"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.google.android.apps.authenticator2"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.google.android.apps.maps"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.anydeskandroid"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kotak.bank.mobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dbs.dbschina"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.VCB"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["bjj.bank.digital.indo.prod"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.mbmobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.gsm.customer"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.lazada.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["io.github.rabehx.securify"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.Version1"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.lemon.lvoverseas"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.xiaomi.mipicks"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.axis.mobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["my.com.cimb.ngb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ifast.dtb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ifast.gb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.cimb.sg.clicksMobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.bpjstku"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["io.liankong.riskdetector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.tsng.applistdetector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.zing.zalo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.OrangeEnvironment.Detector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.miui.newhome"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.xunmeng.pinduoduo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.twitter.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.scottyab.rootbeer.sample"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.deepseek.chat"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.grabtaxi.passenger"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.miui.player"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.miui.gallery"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["cn.wps.moffice_eng.xiaomi.lite"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.microsoft.office.outlook"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.google.android.apps.walletnfcrel"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.apple.bnd"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.xiaomi.youpin"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ex.indianoil.in"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["px.indianoil.in"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.reveny.nativecheck"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = true,
+      ["excludeTargetInstallationSource"] = true,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {
+        1078
+      },
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.suryoday.MB"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.globe.gcash.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.paypal.android.p2pmobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ubercab.driver"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.miniclip.eightballpool"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.paygo24.ibank"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.android.nativetest"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["chunqiu.safe"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "com.tsng.hidemyapplist"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["app.tabby.client"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["icu.nullptr.nativetext"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.simplesusdetector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.chunqiu.detector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vn.dongabank"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.finx.vikki"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["me.nukrs.root.envcheck"] = {
+      ["useWhitelist"] = true,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hdfcbank.android.now"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.tpb.mb.gprsandroid"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.viettel.bss.viettelpos.v4"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.crunchyroll.crunchyroid"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["in.irisbyyes.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.garena.game.kgvo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "moe.shizuku.privileged.api",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "bin.mt.plus.canary",
+        "bin.mt.plus",
+        "bin.mt.termex",
+        "com.sukisu.ultra",
+        "com.tsng.hidemyapplist",
+        "com.my.televip",
+        "com.coderstory.toolkit",
+        "io.github.lsposed.disableflagsecure"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.squareup"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vnpay.Agribank3g"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {
+        "ys.od.pfjp.n.jsobh",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["az.kapitalbank.mbanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.bandhan.mBandhan"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dd.doordash"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "bin.mt.plus",
+        "bin.mt.termex",
+        "com.tsng.hidemyapplist",
+        "com.sukisu.ultra",
+        "xzr.hkf",
+        "com.github.capntrips.kernelflasher",
+        "com.my.televip",
+        "io.github.lsposed.disableflagsecure",
+        "com.coderstory.toolkit",
+        "com.android.shell",
+        "moe.shizuku.privileged.api",
+        "io.github.vvb2060.packageinstaller"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.doordash.driverapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "at.austriao.fake_gps_detector_app",
+        "io.github.auag0.hidemocklocation",
+        "rgqvrb.cmoiar.mdwbwo",
+        "org.frknkrc44.hma_oss",
+        "com.android.shell",
+        "com.android1500.gpssetter",
+        "io.github.jqssun.gpssetter",
+        "com.github.thepiemonster.hidemocklocation",
+        "eu.faircode.xlua",
+        "com.noobexon.xposedfakelocation",
+        "fksncb.wm.yw",
+        "com.telegram.a1064"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.grubhub.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = false,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ubercab"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["me.lyft.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ubercab.eats"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.tencent.ig"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.zhenxi.hunter",
+        "com.byxiaorun.detector",
+        "io.github.lsposed.disableflagsecure",
+        "io.github.vvb2060.mahoshojo",
+        "io.liankong.riskdetector",
+        "io.github.rabehx.securify",
+        "com.thend.integritychecker",
+        "bin.mt.plus.canary",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "com.coderstory.toolkit",
+        "com.sukisu.ultra",
+        "com.tencent.docs",
+        "me.garfieldhan.holmes",
+        "com.github.capntrips.kernelflasher",
+        "com.reveny.nativecheck",
+        "gr.nikolasspyr.integritycheck",
+        "io.github.chsbuffer.revancedxposed",
+        "com.my.televip",
+        "io.github.vvb2060.keyattestation",
+        "com.henrikherzig.playintegritychecker",
+        "krypton.tbsafetychecker",
+        "com.youhu.laifu",
+        "com.tsng.applistdetector",
+        "com.kikyps.crackme",
+        "com.jc",
+        "io.github.a13e300.ksuwebui",
+        "io.github.huskydg.memorydetector",
+        "com.godevelopers.OprekCek",
+        "id.my.pjm.qbcd_okr_dvii",
+        "luna.safe.luna",
+        "me.@UltimateEngine.ok",
+        "icu.nullptr.nativetext",
+        "com.tsng.hidemyapplist",
+        "com.zrt.xposed",
+        "xzr.hkf",
+        "com.android.shell",
+        "com.dergoogler.mmrl",
+        "com.dergoogler.mmrl.wx",
+        "com.aurora.store.nightly",
+        "io.github.vvb2060.magisk",
+        "com.luckyzyx.luckytool",
+        "com.topjohnwu.magisk",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "icu.nullptr.applistdetector",
+        "com.omarea.vtools",
+        "com.cloudflare.onedotonedotonedotone",
+        "bin.mt.plus",
+        "me.weishu.kernelsu",
+        "gvbtcl.yubbjm.qajtjy",
+        "tsfvdj.xiwtkz.wuhyrv",
+        "com.android.kernel",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "eu.thedarken.sdm",
+        "eu.darken.sdmse",
+        "moe.shizuku.privileged.api",
+        "com.termux",
+        "com.thor.nonroot",
+        "com.pyshivam.geergit",
+        "top.ltfan.notdeveloper",
+        "ru.zdevs.zarchiver",
+        "com.modaov.unlock60fps",
+        "org.matrix.demo",
+        "com.aorus.extr",
+        "com.rcmiku.payload.dumper.compose",
+        "wu.Zygisk.Detector",
+        "com.suqi8.oshin",
+        "com.owopdopkmd.wzarcdtfv",
+        "com.abc.abc",
+        "com.gearup.booster",
+        "com.cn.MaxCheatGL",
+        "com.community.oneroom",
+        "com.movieshubinpire.android",
+        "app.netmirror.netmirrornew",
+        "com.jrzheng.supervpnfree",
+        "org.telegram.messenger.web",
+        "com.mx.thorcheat",
+        "org.telegram.messenger",
+        "com.gmail.heagoo.apkeditor.pro",
+        "com.apkpure.aegon",
+        "com.adguard.android",
+        "com.twofasapp",
+        "me.yourbay.airfrozen",
+        "com.onesports.score",
+        "com.apowersoft.mirror",
+        "com.applisto.appcloner",
+        "com.truedevelopersstudio.automatictap.autoclicker",
+        "com.hecorat.screenrecorder.free",
+        "com.py.cloneapp.huawei",
+        "com.fitifyworkouts.bodyweight.workoutapp",
+        "eu.livesport.FlashScore_com",
+        "idm.internet.download.manager.plus",
+        "org.lsposed.manager",
+        "com.mbcp.helper",
+        "eu.thedarken.sdm.unlocker",
+        "p.gfgxk.dn",
+        "com.aorus.arbr",
+        "com.expressvpn.vpn",
+        "com.huawo.hawofit",
+        "popup.toast",
+        "com.scottyab.rootbeer.sample",
+        "org.telegram.plus",
+        "tw.nekomimi.nekogram",
+        "com.binance.dev",
+        "org.circleai",
+        "com.meowna.keybox",
+        "io.github.vvb2060.extractor",
+        "tk.yunus.hexeditor",
+        "com.meowna",
+        "com.twitter.android",
+        "com.abdurazaaqmohammed.AntiSplit",
+        "flar2.devcheck",
+        "bin.mt.termex",
+        "i.qlm",
+        "com.dexprotector.detector.envchecks",
+        "me.itejo443.bindhosts",
+        "com.android.preconditions.cts",
+        "com.studio.duckdetector",
+        "secure.unblock.unlimited.proxy.snap.hotspot.shield",
+        "kiwivpn.connectip.ipchanger.unblocksites",
+        "me.bmax.apatch",
+        "com.tempmail",
+        "com.houvven.oplusupdater",
+        "com.c.cn",
+        "tq.tech.Fpsfree",
+        "com.aide.ui",
+        "com.idragoncheats.studiopro",
+        "com.sand.remotesupportaddon",
+        "com.apkcombo.app",
+        "top.niunaijun.blackdexa64",
+        "gg.now.billing.service2",
+        "com.n0n3m4.droidc",
+        "com.catsmoker.app",
+        "kentos.loader",
+        "sami.pro.keyboard.free",
+        "com.discord",
+        "com.amanyt.tool",
+        "flix.com.vision",
+        "com.n0n3m4.gcc4droid",
+        "me.garfieldhan.attestation",
+        "com.happymod.apk",
+        "hd.camera",
+        "com.myprog.hexedit",
+        "com.t2.AvailoHader",
+        "cc.honista.app",
+        "net.maxters.droid.playi",
+        "io.github.a13e300.tricky_store",
+        "com.mantle.verify",
+        "com.lizardCheatsBGMI",
+        "com.lagofast.mobile.acclerater",
+        "com.nexstreaming.app.kinemasterfree",
+        "com.redfoxpro.iqcars",
+        "com.mapswithme.maps.pro",
+        "com.mf.file",
+        "A.jie.recordscreen",
+        "com.bizi.kernel",
+        "com.mt.isl.mpos.android.zainirq",
+        "com.matrixhax.myapplication",
+        "sa.gov.nic.myid",
+        "me.ninjagram.messenger",
+        "com.noping.gaming.vpn",
+        "com.nr.app",
+        "iq.oodi.com",
+        "com.osn.go",
+        "com.lbe.parallel.intl",
+        "com.sand.airdroidkidp",
+        "com.linux.permissionmanager",
+        "inc.trilokia.pubgfxtool.free",
+        "inc.trilokia.pubgfxtool",
+        "com.deveem.private.browser",
+        "com.mycompany.myapp",
+        "com.android.vending.billing.InAppBillingService.BINN",
+        "com.foxylab.airfox",
+        "com.flinkapps.safteynet",
+        "wu.Rookie.Detector",
+        "com.carriez.flutter_hbb",
+        "cnjkkx.usrmav.elfwth",
+        "co.solovpn",
+        "com.snapchat.android",
+        "com.sigma_rt.tcg",
+        "com.teamviewer.quicksupport.addon.universal",
+        "com.zoogvpn.android",
+        "com.PUBGDCL.kernel",
+        "com.BYemil",
+        "com.factum.nonpenitet",
+        "com.tencent.igce",
+        "themeworld.zte.nubia.red.magic8.magic9.ztenubiaredmagic8walls.launcher.theme",
+        "video.player.videoplayer",
+        "com.xe.currency",
+        "com.changpeng.instafilter",
+        "com.android.kpro",
+        "app.jumpjumpvpn.jumpjumpvpn",
+        "com.kbzbank.kpaycustomer",
+        "com.netflix.NGP.Kamo",
+        "com.facepunch.rust.companion",
+        "nchiyc.mpbmou.dionhs",
+        "com.x.wolfxradar",
+        "cuuca.sendfiles.Activity",
+        "chunqiu.safe.detector",
+        "com.handmark.expressweather",
+        "com.cybercat.acbridge",
+        "org.adblockplus.adblockplussbrowser",
+        "de.szalkowski.activitylauncher",
+        "com.anu.developers3k.rootchecker",
+        "com.htetznaing.adbotg",
+        "org.adaway",
+        "com.sec.android.app.sbrowser.webapk.w5bf26fddbe250ca726aa0479178923c91",
+        "com.example.androidzonews",
+        "dev.dworks.apps.anexplorer.free",
+        "dev.dworks.apps.anexplorer.pro",
+        "com.apk.editor",
+        "com.proapk.apk.installer",
+        "com.apkgetter",
+        "com.lb.app_manager",
+        "io.github.muntashirakon.AppManager",
+        "rk.android.app.appbar",
+        "com.apkmirror.helper.prod",
+        "com.a0soft.gphone.app2sd.pro",
+        "com.valhalla.bolt",
+        "eu.sisik.hackendebug",
+        "eu.sisik.hackendebug.full",
+        "com.lemon.lvoverseas",
+        "com.vishtekstudios.deviceinfo",
+        "org.aospstudio.devoptions",
+        "jp.co.bii.android.app.dskvzr",
+        "com.domka.theme.iconpack",
+        "com.sweetappproivders.setdpi",
+        "ru.niqhhfkq.iloqdyaeh",
+        "com.chornerman.easydpichanger",
+        "org.fdroid.fdroid",
+        "com.rom2box.fw_manager",
+        "com.flightradar24free",
+        "com.natewren.flight",
+        "com.samsung.android.heartplugin",
+        "com.samsung.android.app.watchmanager",
+        "com.androradar.livewallsg2",
+        "com.androradar.livewallsg3",
+        "com.androradar.livewallsg4",
+        "com.androradar.livewallsg9",
+        "com.androradar.livewallsg5",
+        "com.androradar.livewallsg6",
+        "com.androradar.livewallsg7",
+        "com.androradar.livewallsg8",
+        "com.androradar.livewallsg10",
+        "com.androradar.livewallsg16",
+        "com.pixsterstudio.gifmaker_editor_photo_gif_video",
+        "video.to.gif.maker",
+        "com.bk.videotogif",
+        "com.mike.gifmaker",
+        "gifmaker.gifcreator.gifeditor",
+        "com.monotype.android.font.kapp.custom_1714429462",
+        "com.csdeveloper.imgconverterpro",
+        "ru.tech.imageresizershrinker",
+        "com.spaceship.screen.textcopy",
+        "com.akbon.ios",
+        "cn.sealili.icons",
+        "co.livesatelliteview",
+        "com.screensavers_store.matrixlivewallpaper",
+        "mega.privacy.android.app",
+        "com.vpnbottle.melon.free.unblock.fast.vpn",
+        "com.mixplorer",
+        "com.mixplorer.beta",
+        "ru.gavrikov.mocklocations",
+        "com.hrd.motivation",
+        "com.motorola.wallpaper.parallaa",
+        "com.mxtech.videoplayer.ae",
+        "com.mxtech.videoplayer.pro",
+        "com.andatsoft.myapk.fwa",
+        "com.machiav3lli.fdroid",
+        "com.livewallpaper.opace5proBlack",
+        "ostrsf.ijmoeu.uircnu",
+        "in.pyshivam.clearappdata",
+        "com.ytheekshana.deviceinfo",
+        "ru.andr7e.deviceinfohw",
+        "com.fantasytat.det",
+        "me.yuki.folk",
+        "com.jazibkhan.equalizer",
+        "ropl.momo.item",
+        "me.neko.fckvip",
+        "com.secure.unblock.unlimited.proxy.vpnuk",
+        "free.vpnindia.unlimited.fast.secure.proxy.turbo",
+        "at.austriao.fake_gps_detector_app",
+        "com.fkjc.zcro",
+        "io.github.jqssun.gpssetter",
+        "ydyqb.kfqdjcxrr.b.s",
+        "com.android.lc",
+        "com.lizardCheats",
+        "com.accarunit.motionvideoeditor",
+        "app.greyshirts.firewall",
+        "yqheks.hcfaem.elmxyb",
+        "com.niksoftware.snapseed",
+        "dev.hexasoftware.v2box",
+        "com.resukisu.resukisu",
+        "io.ngankbakaa.lineage.detector",
+        "com.chuqniudetector",
+        "com.pyshivam.gplaylicense",
+        "com.aegis.apps",
+        "com.hydraultra.ipultrabox",
+        "com.hdobox.mudx",
+        "com.mediaon.apt",
+        "app.revanced.android.gms",
+        "pwyhpv.lkbxsq.opdmmq",
+        "com.security.xvpn.z35kb"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.pubg.krmobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.zhenxi.hunter",
+        "com.byxiaorun.detector",
+        "io.github.lsposed.disableflagsecure",
+        "io.github.vvb2060.mahoshojo",
+        "io.liankong.riskdetector",
+        "io.github.rabehx.securify",
+        "com.thend.integritychecker",
+        "bin.mt.plus.canary",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "com.coderstory.toolkit",
+        "com.sukisu.ultra",
+        "com.tencent.docs",
+        "me.garfieldhan.holmes",
+        "com.github.capntrips.kernelflasher",
+        "com.reveny.nativecheck",
+        "gr.nikolasspyr.integritycheck",
+        "io.github.chsbuffer.revancedxposed",
+        "com.my.televip",
+        "io.github.vvb2060.keyattestation",
+        "com.henrikherzig.playintegritychecker",
+        "krypton.tbsafetychecker",
+        "com.youhu.laifu",
+        "com.tsng.applistdetector",
+        "com.kikyps.crackme",
+        "com.jc",
+        "io.github.a13e300.ksuwebui",
+        "io.github.huskydg.memorydetector",
+        "com.godevelopers.OprekCek",
+        "id.my.pjm.qbcd_okr_dvii",
+        "luna.safe.luna",
+        "me.@UltimateEngine.ok",
+        "icu.nullptr.nativetext",
+        "com.tsng.hidemyapplist",
+        "com.zrt.xposed",
+        "xzr.hkf",
+        "com.android.shell",
+        "com.dergoogler.mmrl",
+        "com.dergoogler.mmrl.wx",
+        "com.aurora.store.nightly",
+        "io.github.vvb2060.magisk",
+        "com.luckyzyx.luckytool",
+        "com.topjohnwu.magisk",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "icu.nullptr.applistdetector",
+        "com.omarea.vtools",
+        "com.cloudflare.onedotonedotonedotone",
+        "bin.mt.plus",
+        "me.weishu.kernelsu",
+        "gvbtcl.yubbjm.qajtjy",
+        "tsfvdj.xiwtkz.wuhyrv",
+        "com.android.kernel",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "eu.thedarken.sdm",
+        "eu.darken.sdmse",
+        "moe.shizuku.privileged.api",
+        "com.termux",
+        "com.thor.nonroot",
+        "com.pyshivam.geergit",
+        "top.ltfan.notdeveloper",
+        "ru.zdevs.zarchiver",
+        "com.modaov.unlock60fps",
+        "org.matrix.demo",
+        "com.aorus.extr",
+        "com.rcmiku.payload.dumper.compose",
+        "wu.Zygisk.Detector",
+        "com.suqi8.oshin",
+        "com.owopdopkmd.wzarcdtfv",
+        "com.abc.abc",
+        "com.gearup.booster",
+        "com.cn.MaxCheatGL",
+        "com.community.oneroom",
+        "com.movieshubinpire.android",
+        "app.netmirror.netmirrornew",
+        "com.jrzheng.supervpnfree",
+        "org.telegram.messenger.web",
+        "com.mx.thorcheat",
+        "org.telegram.messenger",
+        "com.gmail.heagoo.apkeditor.pro",
+        "com.apkpure.aegon",
+        "com.adguard.android",
+        "com.twofasapp",
+        "me.yourbay.airfrozen",
+        "com.onesports.score",
+        "com.apowersoft.mirror",
+        "com.applisto.appcloner",
+        "com.truedevelopersstudio.automatictap.autoclicker",
+        "com.hecorat.screenrecorder.free",
+        "com.py.cloneapp.huawei",
+        "com.fitifyworkouts.bodyweight.workoutapp",
+        "eu.livesport.FlashScore_com",
+        "idm.internet.download.manager.plus",
+        "org.lsposed.manager",
+        "com.mbcp.helper",
+        "eu.thedarken.sdm.unlocker",
+        "p.gfgxk.dn",
+        "com.aorus.arbr",
+        "com.expressvpn.vpn",
+        "com.huawo.hawofit",
+        "popup.toast",
+        "com.scottyab.rootbeer.sample",
+        "org.telegram.plus",
+        "tw.nekomimi.nekogram",
+        "com.binance.dev",
+        "org.circleai",
+        "com.meowna.keybox",
+        "io.github.vvb2060.extractor",
+        "tk.yunus.hexeditor",
+        "com.meowna",
+        "com.twitter.android",
+        "com.abdurazaaqmohammed.AntiSplit",
+        "flar2.devcheck",
+        "bin.mt.termex",
+        "i.qlm",
+        "com.dexprotector.detector.envchecks",
+        "me.itejo443.bindhosts",
+        "com.android.preconditions.cts",
+        "com.studio.duckdetector",
+        "secure.unblock.unlimited.proxy.snap.hotspot.shield",
+        "kiwivpn.connectip.ipchanger.unblocksites",
+        "me.bmax.apatch",
+        "com.tempmail",
+        "com.houvven.oplusupdater",
+        "com.c.cn",
+        "tq.tech.Fpsfree",
+        "com.aide.ui",
+        "com.idragoncheats.studiopro",
+        "com.sand.remotesupportaddon",
+        "com.apkcombo.app",
+        "top.niunaijun.blackdexa64",
+        "gg.now.billing.service2",
+        "com.n0n3m4.droidc",
+        "com.catsmoker.app",
+        "kentos.loader",
+        "sami.pro.keyboard.free",
+        "com.discord",
+        "com.amanyt.tool",
+        "flix.com.vision",
+        "com.n0n3m4.gcc4droid",
+        "me.garfieldhan.attestation",
+        "com.happymod.apk",
+        "hd.camera",
+        "com.myprog.hexedit",
+        "com.t2.AvailoHader",
+        "cc.honista.app",
+        "net.maxters.droid.playi",
+        "io.github.a13e300.tricky_store",
+        "com.mantle.verify",
+        "com.lizardCheatsBGMI",
+        "com.lagofast.mobile.acclerater",
+        "com.nexstreaming.app.kinemasterfree",
+        "com.redfoxpro.iqcars",
+        "com.mapswithme.maps.pro",
+        "com.mf.file",
+        "A.jie.recordscreen",
+        "com.bizi.kernel",
+        "com.mt.isl.mpos.android.zainirq",
+        "com.matrixhax.myapplication",
+        "sa.gov.nic.myid",
+        "me.ninjagram.messenger",
+        "com.noping.gaming.vpn",
+        "com.nr.app",
+        "iq.oodi.com",
+        "com.osn.go",
+        "com.lbe.parallel.intl",
+        "com.sand.airdroidkidp",
+        "com.linux.permissionmanager",
+        "inc.trilokia.pubgfxtool.free",
+        "inc.trilokia.pubgfxtool",
+        "com.deveem.private.browser",
+        "com.mycompany.myapp",
+        "com.android.vending.billing.InAppBillingService.BINN",
+        "com.foxylab.airfox",
+        "com.flinkapps.safteynet",
+        "wu.Rookie.Detector",
+        "com.carriez.flutter_hbb",
+        "cnjkkx.usrmav.elfwth",
+        "co.solovpn",
+        "com.snapchat.android",
+        "com.sigma_rt.tcg",
+        "com.teamviewer.quicksupport.addon.universal",
+        "com.zoogvpn.android",
+        "com.PUBGDCL.kernel",
+        "com.BYemil",
+        "com.factum.nonpenitet",
+        "com.tencent.igce",
+        "themeworld.zte.nubia.red.magic8.magic9.ztenubiaredmagic8walls.launcher.theme",
+        "video.player.videoplayer",
+        "com.xe.currency",
+        "com.changpeng.instafilter",
+        "com.android.kpro",
+        "app.jumpjumpvpn.jumpjumpvpn",
+        "com.kbzbank.kpaycustomer",
+        "com.netflix.NGP.Kamo",
+        "com.facepunch.rust.companion",
+        "nchiyc.mpbmou.dionhs",
+        "com.x.wolfxradar",
+        "cuuca.sendfiles.Activity",
+        "chunqiu.safe.detector",
+        "com.handmark.expressweather",
+        "com.cybercat.acbridge",
+        "org.adblockplus.adblockplussbrowser",
+        "de.szalkowski.activitylauncher",
+        "com.anu.developers3k.rootchecker",
+        "com.htetznaing.adbotg",
+        "org.adaway",
+        "com.sec.android.app.sbrowser.webapk.w5bf26fddbe250ca726aa0479178923c91",
+        "com.example.androidzonews",
+        "dev.dworks.apps.anexplorer.free",
+        "dev.dworks.apps.anexplorer.pro",
+        "com.apk.editor",
+        "com.proapk.apk.installer",
+        "com.apkgetter",
+        "com.lb.app_manager",
+        "io.github.muntashirakon.AppManager",
+        "rk.android.app.appbar",
+        "com.apkmirror.helper.prod",
+        "com.a0soft.gphone.app2sd.pro",
+        "com.valhalla.bolt",
+        "eu.sisik.hackendebug",
+        "eu.sisik.hackendebug.full",
+        "com.lemon.lvoverseas",
+        "com.vishtekstudios.deviceinfo",
+        "org.aospstudio.devoptions",
+        "jp.co.bii.android.app.dskvzr",
+        "com.domka.theme.iconpack",
+        "com.sweetappproivders.setdpi",
+        "ru.niqhhfkq.iloqdyaeh",
+        "com.chornerman.easydpichanger",
+        "org.fdroid.fdroid",
+        "com.rom2box.fw_manager",
+        "com.flightradar24free",
+        "com.natewren.flight",
+        "com.samsung.android.heartplugin",
+        "com.samsung.android.app.watchmanager",
+        "com.androradar.livewallsg2",
+        "com.androradar.livewallsg3",
+        "com.androradar.livewallsg4",
+        "com.androradar.livewallsg9",
+        "com.androradar.livewallsg5",
+        "com.androradar.livewallsg6",
+        "com.androradar.livewallsg7",
+        "com.androradar.livewallsg8",
+        "com.androradar.livewallsg10",
+        "com.androradar.livewallsg16",
+        "com.pixsterstudio.gifmaker_editor_photo_gif_video",
+        "video.to.gif.maker",
+        "com.bk.videotogif",
+        "com.mike.gifmaker",
+        "gifmaker.gifcreator.gifeditor",
+        "com.monotype.android.font.kapp.custom_1714429462",
+        "com.csdeveloper.imgconverterpro",
+        "ru.tech.imageresizershrinker",
+        "com.spaceship.screen.textcopy",
+        "com.akbon.ios",
+        "cn.sealili.icons",
+        "co.livesatelliteview",
+        "com.screensavers_store.matrixlivewallpaper",
+        "mega.privacy.android.app",
+        "com.vpnbottle.melon.free.unblock.fast.vpn",
+        "com.mixplorer",
+        "com.mixplorer.beta",
+        "ru.gavrikov.mocklocations",
+        "com.hrd.motivation",
+        "com.motorola.wallpaper.parallaa",
+        "com.mxtech.videoplayer.ae",
+        "com.mxtech.videoplayer.pro",
+        "com.andatsoft.myapk.fwa",
+        "com.machiav3lli.fdroid",
+        "com.livewallpaper.opace5proBlack",
+        "ostrsf.ijmoeu.uircnu",
+        "in.pyshivam.clearappdata",
+        "com.ytheekshana.deviceinfo",
+        "ru.andr7e.deviceinfohw",
+        "com.fantasytat.det",
+        "me.yuki.folk",
+        "com.jazibkhan.equalizer",
+        "ropl.momo.item",
+        "me.neko.fckvip",
+        "com.secure.unblock.unlimited.proxy.vpnuk",
+        "free.vpnindia.unlimited.fast.secure.proxy.turbo",
+        "at.austriao.fake_gps_detector_app",
+        "com.fkjc.zcro",
+        "io.github.jqssun.gpssetter",
+        "ydyqb.kfqdjcxrr.b.s",
+        "com.android.lc",
+        "com.lizardCheats",
+        "com.accarunit.motionvideoeditor",
+        "app.greyshirts.firewall",
+        "yqheks.hcfaem.elmxyb",
+        "com.niksoftware.snapseed",
+        "dev.hexasoftware.v2box",
+        "com.resukisu.resukisu",
+        "io.ngankbakaa.lineage.detector",
+        "com.chuqniudetector",
+        "com.pyshivam.gplaylicense",
+        "com.aegis.apps",
+        "com.hydraultra.ipultrabox",
+        "com.hdobox.mudx",
+        "com.mediaon.apt",
+        "app.revanced.android.gms",
+        "pwyhpv.lkbxsq.opdmmq",
+        "com.security.xvpn.z35kb"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.grabtaxi.driver2"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.revolut.business"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ru.ozon.fintech.finance"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.transfergo.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kozhevin.rootchecks"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["lt.lemonlabs.android.paysera"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.paysend.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["gr.payzy"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.robinhood.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.robinhood.global"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["net.typeblog.shelter"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.moneybookers.skrillpayments"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vivid.money"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.android1500.yard"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ru.rostel"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["org.chromium.webapk.aadc7284a22f4efbc_v2"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.moonpay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.garena.gaslite"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.cloudflare.onedotonedotonedotone",
+        "com.modaov.unlock60fps",
+        "com.anydesk.adcontrol.ad1",
+        "com.android.preconditions.cts",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "me.garfieldhan.holmes",
+        "com.zhenxi.hunter",
+        "io.github.vvb2060.keyattestation",
+        "com.luckyzyx.luckytool",
+        "bin.mt.plus.canary",
+        "com.reveny.nativecheck",
+        "icu.nullptr.nativetest",
+        "gr.nikolasspyr.integritycheck",
+        "com.byxiaorun.detector",
+        "moe.shizuku.privileged.api",
+        "com.sukisu.ultra",
+        "org.telegram.messenger",
+        "com.heytap.themestore",
+        "com.free.vpn.india.proxy.planet",
+        "com.android.shell"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dts.freefiremax"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "io.github.vvb2060.magisk",
+        "me.bmax.apatch",
+        "com.tsng.applistdetector",
+        "icu.nullptr.applistdetector",
+        "com.youhu.laifu",
+        "org.frknkrc44.hma_oss",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "com.anydesk.anydeskandroid",
+        "io.github.huskydg.memorydetector",
+        "com.reveny.nativecheck",
+        "io.liankong.riskdetector",
+        "com.byxiaorun.detector",
+        "icu.nullptr.nativetest",
+        "com.android.nativetest",
+        "io.github.a13e300.ksuwebui",
+        "com.dergoogler.mmrl",
+        "com.topjohnwu.magisk",
+        "com.sukisu.ultra",
+        "com.luckyzyx.luckytool",
+        "bin.mt.plus.canary",
+        "com.android.shell",
+        "com.coderstory.toolkit",
+        "com.zrt.xposed",
+        "com.android.kernel",
+        "com.android.cngpcebkchn",
+        "com.game.kernel",
+        "com.android.cnpgcebkgl",
+        "org.telegram.messenger",
+        "org.telegram.plus",
+        "com.my.televip",
+        "ru.zdevs.zarchiver",
+        "io.github.rabehx.securify",
+        "com.zhenxi.hunter",
+        "moe.shizuku.privileged.api",
+        "io.github.chsbuffer.revancedxposed",
+        "xzr.hkf",
+        "io.github.lsposed.disableflagsecure",
+        "com.garena.gaslite",
+        "luna.safe.luna",
+        "com.anydesk.adcontrol.ad1",
+        "com.omarea.vtools",
+        "me.garfieldhan.holmes",
+        "com.rcmiku.payload.dumper.compose",
+        "com.kikyps.crackme",
+        "io.github.vvb2060.mahoshojo",
+        "com.android.preconditions.cts",
+        "com.rem01gaming.disclosure",
+        "io.github.vvb2060.keyattestation",
+        "gr.nikolasspyr.integritycheck",
+        "com.free.vpn.india.proxy.planet",
+        "com.owopdopkmd.wzarcdtfv",
+        "gnouh.tool",
+        "bin.mt.termex",
+        "bin.mt.plus",
+        "krypton.tbsafetychecker",
+        "com.doithecao247",
+        "flar2.devcheck"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vng.codmvn"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.garena.game.df"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.tsng.hidemyapplist",
+        "org.frknkrc44.hma_oss",
+        "com.cloudflare.onedotonedotonedotone",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "bin.mt.plus.canary",
+        "bin.mt.plus",
+        "com.sukisu.ultra",
+        "io.github.vvb2060.magisk",
+        "com.topjohnwu.magisk",
+        "me.bmax.apatch",
+        "icu.nullptr.applistdetector",
+        "com.tsng.applistdetector",
+        "io.github.huskydg.memorydetector",
+        "com.reveny.nativecheck",
+        "com.byxiaorun.detector",
+        "io.liankong.riskdetector",
+        "com.kikyps.crackme",
+        "com.omarea.vtools",
+        "com.my.televip",
+        "org.telegram.plus",
+        "org.telegram.messenger",
+        "com.android.shell",
+        "moe.shizuku.privileged.api",
+        "io.github.lsposed.disableflagsecure",
+        "com.luckyzyx.luckytool",
+        "com.zhenxi.hunter",
+        "com.youhu.laifu",
+        "com.coloros.securepay",
+        "com.android.cngpcebkchn",
+        "com.android.cnpgcebkgl",
+        "com.android.kernel",
+        "com.game.kernel",
+        "com.zrt.xposed"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.unionpay.tsmservice"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.riotgames.league.wildriftvn"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {
+        "io.github.vvb2060.magisk",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "me.bmax.apatch",
+        "com.sukisu.ultra",
+        "icu.nullptr.applistdetector",
+        "com.tsng.applistdetector",
+        "com.youhu.laifu",
+        "org.frknkrc44.hma_oss",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "io.liankong.riskdetector",
+        "com.byxiaorun.detector",
+        "com.reveny.nativecheck",
+        "io.github.huskydg.memorydetector",
+        "icu.nullptr.nativetest",
+        "com.android.nativetest",
+        "luna.safe.luna",
+        "bin.mt.plus.canary",
+        "com.kikyps.crackme",
+        "com.omarea.vtools",
+        "com.my.televip",
+        "org.telegram.plus",
+        "org.telegram.messenger",
+        "com.android.cngpcebkchn",
+        "com.android.cnpgcebkgl",
+        "com.android.kernel",
+        "com.game.kernel",
+        "com.zrt.xposed",
+        "com.garena.gaslite",
+        "xzr.hkf",
+        "me.garfieldhan.holmes",
+        "com.zhenxi.hunter",
+        "io.github.a13e300.ksuwebui",
+        "com.luckyzyx.luckytool",
+        "com.topjohnwu.magisk",
+        "io.github.vvb2060.mahoshojo",
+        "moe.shizuku.privileged.api",
+        "com.android.shell",
+        "io.github.rabehx.securify",
+        "ru.zdevs.zarchiver",
+        "io.github.chsbuffer.revancedxposed",
+        "com.coderstory.toolkit",
+        "io.github.lsposed.disableflagsecure"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dts.freefireth"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "io.github.vvb2060.magisk",
+        "me.bmax.apatch",
+        "com.anydesk.anydeskandroid",
+        "icu.nullptr.applistdetector",
+        "com.tsng.applistdetector",
+        "com.youhu.laifu",
+        "org.frknkrc44.hma_oss",
+        "com.coderstory.toolkit",
+        "com.kikyps.crackme",
+        "me.garfieldhan.holmes",
+        "xzr.hkf",
+        "com.zhenxi.hunter",
+        "com.android.kernel",
+        "com.game.kernel",
+        "io.github.a13e300.ksuwebui",
+        "com.luckyzyx.luckytool",
+        "luna.safe.luna",
+        "com.topjohnwu.magisk",
+        "com.dergoogler.mmrl",
+        "io.github.vvb2060.mahoshojo",
+        "bin.mt.plus.canary",
+        "com.reveny.nativecheck",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "com.rcmiku.payload.dumper.compose",
+        "org.telegram.plus",
+        "com.teamviewer.quicksupport.market",
+        "io.github.chsbuffer.revancedxposed",
+        "io.liankong.riskdetector",
+        "com.byxiaorun.detector",
+        "com.omarea.vtools",
+        "io.github.rabehx.securify",
+        "moe.shizuku.privileged.api",
+        "com.my.televip",
+        "com.teamviewer.teamviewer.market.mobile",
+        "ru.zdevs.zarchiver",
+        "com.zrt.xposed",
+        "com.android.cngpcebkchn",
+        "com.android.cnpgcebkgl",
+        "io.github.huskydg.memorydetector",
+        "com.android.shell",
+        "bin.mt.plus",
+        "bin.mt.termex",
+        "com.sukisu.ultra",
+        "org.telegram.messenger",
+        "com.ss.android.ugc.trill",
+        "ibwpdd.vxisug.sjetci"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.squareup.cash"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.rem01gaming.disclosure"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.qnbalahli.bebasata"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.customer.herofincorp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["mobile.acb.com.vn"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vnpay.smartacccount"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.tpb.ebmobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ph.com.gotyme"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.rcbc.pulz"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["sa.com.stcbank"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ph.allbank.mbapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["zebpay.Application"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ph.com.metrobank.mcc.mbonline"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "top.ltfan.notdeveloper",
+        "org.frknkrc44.hma_oss"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.proxima.dfm"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "com.anydesk.anydeskandroid",
+        "com.kikyps.crackme",
+        "ninja.thiha.frozenkeyboard2",
+        "org.frknkrc44.hma_oss",
+        "com.happymod.apk",
+        "me.garfieldhan.holmes",
+        "xzr.hkf",
+        "com.zhenxi.hunter",
+        "com.catchingnow.icebox",
+        "com.github.capntrips.kernelflasher",
+        "com.android.kernel",
+        "com.mixplorer",
+        "com.minimax.ai",
+        "io.github.vvb2060.mahoshojo",
+        "bin.mt.plus",
+        "com.reveny.nativecheck",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "gr.nikolasspyr.integritycheck",
+        "com.byxiaorun.detector",
+        "eu.thedarken.sdm",
+        "eu.darken.sdmse",
+        "moe.shizuku.privileged.api",
+        "com.sukisu.ultra",
+        "com.termux",
+        "com.thor.nonroot",
+        "ru.zdevs.zarchiver",
+        "com.anydesk.adcontrol.ad1",
+        "com.android.shell",
+        "com.tsng.applistdetector",
+        "icu.nullptr.applistdetector",
+        "com.youhu.laifu",
+        "com.rem01gaming.disclosure"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.com.msb.smartBanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.amazon.rabbit"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.amazon.flex.rabbit"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ubi.parivar"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.google.android.apps.photos"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["org.matrix.demo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["eu.eleader.mobilebanking.nbk"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.okinc.okex.gp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vcb.t2p"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.alinma.retail.mobile.v4"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.garena.game.kgvn"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.cloudflare.onedotonedotonedotone",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "icu.nullptr.applistdetector",
+        "com.tsng.applistdetector",
+        "com.youhu.laifu",
+        "com.kikyps.crackme",
+        "org.matrix.demo",
+        "com.modaov.turbogamebooster",
+        "com.rem01gaming.disclosure",
+        "com.digilocker.android",
+        "com.garena.gaslite",
+        "org.frknkrc44.hma_oss",
+        "me.garfieldhan.holmes",
+        "xzr.hkf",
+        "com.zhenxi.hunter",
+        "top.ltfan.notdeveloper",
+        "com.rifsxd.ksunext",
+        "io.github.a13e300.ksuwebui",
+        "io.github.vvb2060.mahoshojo",
+        "io.github.huskydg.memorydetector",
+        "icu.nullptr.nativetest",
+        "com.android.nativetest",
+        "com.reveny.nativecheck",
+        "tw.nekomimi.nekogram",
+        "org.telegram.plus",
+        "gr.nikolasspyr.integritycheck",
+        "io.github.chsbuffer.revancedxposed",
+        "io.liankong.riskdetector",
+        "com.scottyab.rootbeer.sample",
+        "io.github.rabehx.securify",
+        "moe.shizuku.privileged.api",
+        "me.bmax.apatch",
+        "bin.mt.termex",
+        "bin.mt.plus",
+        "org.circleai",
+        "me.garfieldhan.attestation",
+        "tk.yunus.hexeditor",
+        "io.github.vvb2060.extractor",
+        "com.github.capntrips.kernelflasher",
+        "com.meowna.keybox",
+        "kiwivpn.connectip.ipchanger.unblocksites",
+        "com.luckyzyx.luckytool",
+        "com.meowna",
+        "com.rcmiku.payload.dumper.compose",
+        "com.byxiaorun.detector",
+        "com.carriez.flutter_hbb",
+        "com.sukisu.ultra",
+        "com.my.televip",
+        "com.termux",
+        "ru.zdevs.zarchiver",
+        "wu.Zygisk.Detector",
+        "com.abdurazaaqmohammed.AntiSplit",
+        "luna.safe.luna",
+        "com.android.shell",
+        "com.android.preconditions.cts",
+        "bin.mt.plus.canary",
+        "com.free.vpn.india.proxy.planet",
+        "com.owopdopkmd.wzarcdtfv",
+        "org.telegram.messenger",
+        "com.teamviewer.quicksupport.market",
+        "com.ss.android.ugc.trill",
+        "ibwpdd.vxisug.sjetci",
+        "io.github.vvb2060.keyattestation",
+        "krypton.tbsafetychecker"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["xyz.be.cake"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.bpi.ng.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["cashgiraffe.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.sacombank.ewallet"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vib.myvib2"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.tencent.mm"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["wu.Zygisk.Detector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.meowna"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.abc.abc",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.youhu.laifu",
+        "com.kikyps.crackme",
+        "com.gearup.booster",
+        "org.frknkrc44.hma_oss",
+        "com.zhenxi.hunter",
+        "com.cn.MaxCheatGL",
+        "com.reveny.nativecheck",
+        "icu.nullptr.nativetest",
+        "io.liankong.riskdetector",
+        "com.byxiaorun.detector",
+        "com.sukisu.ultra",
+        "com.jrzheng.supervpnfree"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.discord"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.garena.game.kgtw"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.cloudflare.onedotonedotonedotone",
+        "com.modaov.unlock60fps",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.android.preconditions.cts",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "me.garfieldhan.holmes",
+        "com.zhenxi.hunter",
+        "io.github.vvb2060.keyattestation",
+        "com.luckyzyx.luckytool",
+        "bin.mt.plus.canary",
+        "com.reveny.nativecheck",
+        "icu.nullptr.nativetest",
+        "gr.nikolasspyr.integritycheck",
+        "com.byxiaorun.detector",
+        "moe.shizuku.privileged.api",
+        "com.sukisu.ultra",
+        "org.telegram.messenger",
+        "com.android.shell"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vttm.vietteldiscovery"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.whatsapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.shb.saha.mbanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "p.gfgxk.dn",
+        "com.cloudflare.onedotonedotonedotone",
+        "com.twofasapp",
+        "com.anydesk.adcontrol.ad1",
+        "com.adguard.android",
+        "me.yourbay.airfrozen",
+        "com.onesports.score",
+        "com.gmail.heagoo.apkeditor.pro",
+        "com.truedevelopersstudio.automatictap.autoclicker",
+        "com.hecorat.screenrecorder.free",
+        "org.frknkrc44.hma_oss",
+        "io.github.a13e300.ksuwebui"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["br.com.bb.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.lcode.ucoupi"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["de.barmergek.serviceapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.bKash.customerapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["pro.bingbon.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.alahli.rf"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.proximabeta.mf.uamo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "com.angel.guardian.alliance.app",
+        "com.anydesk.anydeskandroid",
+        "com.aorus.arbr",
+        "com.eco.global.app",
+        "com.evnhcmc.evnmobileapp",
+        "com.expressvpn.vpn",
+        "com.goldfun.app",
+        "com.havaz_app",
+        "com.huawo.hawofit",
+        "org.frknkrc44.hma_oss",
+        "popup.toast",
+        "bin.mt.plus",
+        "org.telegram.messenger",
+        "com.sukisu.ultra",
+        "com.android.shell"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.proximabeta.mf.liteuamo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "com.angel.guardian.alliance.app",
+        "com.anydesk.anydeskandroid",
+        "com.aorus.arbr",
+        "com.expressvpn.vpn",
+        "com.eco.global.app",
+        "com.evnhcmc.evnmobileapp",
+        "com.goldfun.app",
+        "com.havaz_app",
+        "com.huawo.hawofit",
+        "org.frknkrc44.hma_oss",
+        "popup.toast",
+        "bin.mt.plus",
+        "org.telegram.messenger",
+        "com.sukisu.ultra",
+        "com.android.shell"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vnggames.cfl.crossfirelegends"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "com.angel.guardian.alliance.app",
+        "com.anydesk.anydeskandroid",
+        "com.aorus.arbr",
+        "com.eco.global.app",
+        "com.evnhcmc.evnmobileapp",
+        "com.expressvpn.vpn",
+        "com.havaz_app",
+        "com.huawo.hawofit",
+        "org.frknkrc44.hma_oss",
+        "com.mm.android.smartlifeiot",
+        "popup.toast",
+        "bin.mt.plus",
+        "org.telegram.messenger",
+        "com.sukisu.ultra",
+        "com.android.shell"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.eco.global.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.goldfun.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.havaz_app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.angel.guardian.alliance.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.chillyroom.jdyw.gp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.angel.guardian.alliance.app",
+        "com.aorus.arbr",
+        "com.eco.global.app",
+        "com.evnhcmc.evnmobileapp",
+        "com.expressvpn.vpn",
+        "org.frknkrc44.hma_oss",
+        "com.huawo.hawofit",
+        "com.havaz_app",
+        "com.goldfun.app",
+        "popup.toast",
+        "com.mm.android.smartlifeiot",
+        "bin.mt.plus",
+        "com.sukisu.ultra",
+        "org.telegram.messenger",
+        "com.android.shell"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.pbb.mypb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.snapwork.hdfc"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["sg.ndi.sp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.studio.duckdetector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "bin.mt.plus",
+        "bin.mt.plus.canary",
+        "iculjf.ntqawm.npeqah",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "me.bmax.apatch",
+        "io.github.vvb2060.magisk",
+        "com.sukisu.ultra",
+        "com.kikyps.crackme"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["iq.qicard.qipay.prod"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.aide.ui",
+        "com.idragoncheats.studiopro"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.shopify.mobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["br.com.gabba.Caixa"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ro.btrl.mobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.bitdefender.gravityzone.securityformobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ocb.liobank"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.securitybank.bbx"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ausmallfinancebank.amb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.AlBarakaEG.CorpNew"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.cimbbank.octo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.sotaylpb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.shb.mbanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.cibc.android.mobi"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.nbk.weyay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.indiainfoline"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.app.hdfc"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.adcb.bank"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hdfcbank.smartwealthapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.reservebankofindia"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dbs.sg.dbsmbanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.iexceed.ib.digitalbankingprod"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.snapwork.IDBI"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.com.lpb.lienviet24h"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.msf.kbank.mobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["ops.namabank.com.vn"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["uk.co.hsbc.hsbcukmobilebanking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.sbg.mobile.phone"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.shinhan.global.in.bank"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.nu.production"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["io.lifestyle.plus"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.sbi.SBIFreedomPlus"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hsl.investright"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["in.hsbc.hsbcindia"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.fedmobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.tnex.consumer"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["capitec.acuity.mobile.prod"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.infrasoft.uboi"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["co.uk.getmondo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["enetviet.corp.qi.enetvietnew"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.roblox.client"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kiloo.subwaysurf"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["exodusmovement.exodus"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.worldfirst.mobile"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.transferwise.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["br.com.intermedium"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "dev_options"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["vn.com.ocb.awe"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hdfcfund.investor"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hdfcclife.activities"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["us.zoom.videomeetings"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hdfc.smarthub"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.boi.investor"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.cgv.cinema.vn"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dexprotector.detector.envchecks"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.uzpsb.olam"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.blockchainvault"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["chunqiu.safe.detector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["wu.Rookie.Detector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ap.asiapay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["app.baly.passenger"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ofss.digx.mobile.android.allied"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["invo8.meezan.mb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.pitb.ePayGateway"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {},
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.techlogix.mobilinkcustomer"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.google.android.apps.playconsole"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.surfshark.vpnclient.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.yubico.yubioath"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["pk.gov.nadra.pakid"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.telenor.pakistan.mytelenor"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.jazz.jazzworld"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.govpk.citizensportal"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.vng.mf.uamo"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["xyz.be.customer"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ngame.allstar.eu"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["hr.asseco.android.intesa.isbd.cib"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.DB.playinstore"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.etisalat.flous"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["cris.org.in.ress"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["at.persie0.root_detection_app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.dcb"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.fkjc.zcro"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["in.org.npci.upiapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["in.jfs.jiofinance"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.naviapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.hdfcbank.payzapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.popclub.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.adityabirlacapitaldigital.OneApp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.myairtelapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["in.amazon.mShop.android.shopping"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.postpe.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.grofers.customerapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.flipkart.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["in.indwealth"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kreditpe.android.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.uvnv.mintsim"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.mobikwik_new"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.jio.myjio"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.phonepe.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.shriram.one"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["indwin.c3.shareapp"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["money.super.payments"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.twid.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.canarabhim.upiapp.mobility"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = true,
+      ["hideSystemInstallationSource"] = true,
+      ["excludeTargetInstallationSource"] = true,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.kbzbank.kpaycustomer"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.apkpure.aegon",
+        "com.tsng.applistdetector"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.ubercab.fleet"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.rekoo.pubgm"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.zhenxi.hunter",
+        "com.byxiaorun.detector",
+        "io.github.lsposed.disableflagsecure",
+        "io.github.vvb2060.mahoshojo",
+        "io.liankong.riskdetector",
+        "io.github.rabehx.securify",
+        "com.thend.integritychecker",
+        "bin.mt.plus.canary",
+        "com.android.nativetest",
+        "icu.nullptr.nativetest",
+        "com.coderstory.toolkit",
+        "com.sukisu.ultra",
+        "com.tencent.docs",
+        "me.garfieldhan.holmes",
+        "com.github.capntrips.kernelflasher",
+        "com.reveny.nativecheck",
+        "gr.nikolasspyr.integritycheck",
+        "io.github.chsbuffer.revancedxposed",
+        "com.my.televip",
+        "io.github.vvb2060.keyattestation",
+        "com.henrikherzig.playintegritychecker",
+        "krypton.tbsafetychecker",
+        "com.youhu.laifu",
+        "com.tsng.applistdetector",
+        "com.kikyps.crackme",
+        "com.jc",
+        "io.github.a13e300.ksuwebui",
+        "io.github.huskydg.memorydetector",
+        "com.godevelopers.OprekCek",
+        "id.my.pjm.qbcd_okr_dvii",
+        "luna.safe.luna",
+        "me.@UltimateEngine.ok",
+        "icu.nullptr.nativetext",
+        "com.tsng.hidemyapplist",
+        "com.zrt.xposed",
+        "xzr.hkf",
+        "com.android.shell",
+        "com.dergoogler.mmrl",
+        "com.dergoogler.mmrl.wx",
+        "com.aurora.store.nightly",
+        "io.github.vvb2060.magisk",
+        "com.luckyzyx.luckytool",
+        "com.topjohnwu.magisk",
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.teamviewer.quicksupport.market",
+        "com.teamviewer.teamviewer.market.mobile",
+        "icu.nullptr.applistdetector",
+        "com.omarea.vtools",
+        "com.cloudflare.onedotonedotonedotone",
+        "bin.mt.plus",
+        "me.weishu.kernelsu",
+        "gvbtcl.yubbjm.qajtjy",
+        "tsfvdj.xiwtkz.wuhyrv",
+        "com.android.kernel",
+        "com.rem01gaming.disclosure",
+        "org.frknkrc44.hma_oss",
+        "eu.thedarken.sdm",
+        "eu.darken.sdmse",
+        "moe.shizuku.privileged.api",
+        "com.termux",
+        "com.thor.nonroot",
+        "com.pyshivam.geergit",
+        "top.ltfan.notdeveloper",
+        "ru.zdevs.zarchiver",
+        "com.modaov.unlock60fps",
+        "org.matrix.demo",
+        "com.aorus.extr",
+        "com.rcmiku.payload.dumper.compose",
+        "wu.Zygisk.Detector",
+        "com.suqi8.oshin",
+        "com.owopdopkmd.wzarcdtfv",
+        "com.abc.abc",
+        "com.gearup.booster",
+        "com.cn.MaxCheatGL",
+        "com.community.oneroom",
+        "com.movieshubinpire.android",
+        "app.netmirror.netmirrornew",
+        "com.jrzheng.supervpnfree",
+        "org.telegram.messenger.web",
+        "com.mx.thorcheat",
+        "org.telegram.messenger",
+        "com.gmail.heagoo.apkeditor.pro",
+        "com.apkpure.aegon",
+        "com.adguard.android",
+        "com.twofasapp",
+        "me.yourbay.airfrozen",
+        "com.onesports.score",
+        "com.apowersoft.mirror",
+        "com.applisto.appcloner",
+        "com.truedevelopersstudio.automatictap.autoclicker",
+        "com.hecorat.screenrecorder.free",
+        "com.py.cloneapp.huawei",
+        "com.fitifyworkouts.bodyweight.workoutapp",
+        "eu.livesport.FlashScore_com",
+        "idm.internet.download.manager.plus",
+        "org.lsposed.manager",
+        "com.mbcp.helper",
+        "eu.thedarken.sdm.unlocker",
+        "p.gfgxk.dn",
+        "com.aorus.arbr",
+        "com.expressvpn.vpn",
+        "com.huawo.hawofit",
+        "popup.toast",
+        "com.scottyab.rootbeer.sample",
+        "org.telegram.plus",
+        "tw.nekomimi.nekogram",
+        "com.binance.dev",
+        "org.circleai",
+        "com.meowna.keybox",
+        "io.github.vvb2060.extractor",
+        "tk.yunus.hexeditor",
+        "com.meowna",
+        "com.twitter.android",
+        "com.abdurazaaqmohammed.AntiSplit",
+        "flar2.devcheck",
+        "bin.mt.termex",
+        "i.qlm",
+        "com.dexprotector.detector.envchecks",
+        "me.itejo443.bindhosts",
+        "com.android.preconditions.cts",
+        "com.studio.duckdetector",
+        "secure.unblock.unlimited.proxy.snap.hotspot.shield",
+        "kiwivpn.connectip.ipchanger.unblocksites",
+        "me.bmax.apatch",
+        "com.tempmail",
+        "com.houvven.oplusupdater",
+        "com.c.cn",
+        "tq.tech.Fpsfree",
+        "com.aide.ui",
+        "com.idragoncheats.studiopro",
+        "com.sand.remotesupportaddon",
+        "com.apkcombo.app",
+        "top.niunaijun.blackdexa64",
+        "gg.now.billing.service2",
+        "com.n0n3m4.droidc",
+        "com.catsmoker.app",
+        "kentos.loader",
+        "sami.pro.keyboard.free",
+        "com.discord",
+        "com.amanyt.tool",
+        "flix.com.vision",
+        "com.n0n3m4.gcc4droid",
+        "me.garfieldhan.attestation",
+        "com.happymod.apk",
+        "hd.camera",
+        "com.myprog.hexedit",
+        "com.t2.AvailoHader",
+        "cc.honista.app",
+        "net.maxters.droid.playi",
+        "io.github.a13e300.tricky_store",
+        "com.mantle.verify",
+        "com.lizardCheatsBGMI",
+        "com.lagofast.mobile.acclerater",
+        "com.nexstreaming.app.kinemasterfree",
+        "com.redfoxpro.iqcars",
+        "com.mapswithme.maps.pro",
+        "com.mf.file",
+        "A.jie.recordscreen",
+        "com.bizi.kernel",
+        "com.mt.isl.mpos.android.zainirq",
+        "com.matrixhax.myapplication",
+        "sa.gov.nic.myid",
+        "me.ninjagram.messenger",
+        "com.noping.gaming.vpn",
+        "com.nr.app",
+        "iq.oodi.com",
+        "com.osn.go",
+        "com.lbe.parallel.intl",
+        "com.sand.airdroidkidp",
+        "com.linux.permissionmanager",
+        "inc.trilokia.pubgfxtool.free",
+        "inc.trilokia.pubgfxtool",
+        "com.deveem.private.browser",
+        "com.mycompany.myapp",
+        "com.android.vending.billing.InAppBillingService.BINN",
+        "com.foxylab.airfox",
+        "com.flinkapps.safteynet",
+        "wu.Rookie.Detector",
+        "com.carriez.flutter_hbb",
+        "cnjkkx.usrmav.elfwth",
+        "co.solovpn",
+        "com.snapchat.android",
+        "com.sigma_rt.tcg",
+        "com.teamviewer.quicksupport.addon.universal",
+        "com.zoogvpn.android",
+        "com.PUBGDCL.kernel",
+        "com.BYemil",
+        "com.factum.nonpenitet",
+        "com.tencent.igce",
+        "themeworld.zte.nubia.red.magic8.magic9.ztenubiaredmagic8walls.launcher.theme",
+        "video.player.videoplayer",
+        "com.xe.currency",
+        "com.changpeng.instafilter",
+        "com.android.kpro",
+        "app.jumpjumpvpn.jumpjumpvpn",
+        "com.kbzbank.kpaycustomer",
+        "com.netflix.NGP.Kamo",
+        "com.facepunch.rust.companion",
+        "nchiyc.mpbmou.dionhs",
+        "com.x.wolfxradar",
+        "cuuca.sendfiles.Activity",
+        "chunqiu.safe.detector",
+        "com.handmark.expressweather",
+        "com.cybercat.acbridge",
+        "org.adblockplus.adblockplussbrowser",
+        "de.szalkowski.activitylauncher",
+        "com.anu.developers3k.rootchecker",
+        "com.htetznaing.adbotg",
+        "org.adaway",
+        "com.sec.android.app.sbrowser.webapk.w5bf26fddbe250ca726aa0479178923c91",
+        "com.example.androidzonews",
+        "dev.dworks.apps.anexplorer.free",
+        "dev.dworks.apps.anexplorer.pro",
+        "com.apk.editor",
+        "com.proapk.apk.installer",
+        "com.apkgetter",
+        "com.lb.app_manager",
+        "io.github.muntashirakon.AppManager",
+        "rk.android.app.appbar",
+        "com.apkmirror.helper.prod",
+        "com.a0soft.gphone.app2sd.pro",
+        "com.valhalla.bolt",
+        "eu.sisik.hackendebug",
+        "eu.sisik.hackendebug.full",
+        "com.lemon.lvoverseas",
+        "com.vishtekstudios.deviceinfo",
+        "org.aospstudio.devoptions",
+        "jp.co.bii.android.app.dskvzr",
+        "com.domka.theme.iconpack",
+        "com.sweetappproivders.setdpi",
+        "ru.niqhhfkq.iloqdyaeh",
+        "com.chornerman.easydpichanger",
+        "org.fdroid.fdroid",
+        "com.rom2box.fw_manager",
+        "com.flightradar24free",
+        "com.natewren.flight",
+        "com.samsung.android.heartplugin",
+        "com.samsung.android.app.watchmanager",
+        "com.androradar.livewallsg2",
+        "com.androradar.livewallsg3",
+        "com.androradar.livewallsg4",
+        "com.androradar.livewallsg9",
+        "com.androradar.livewallsg5",
+        "com.androradar.livewallsg6",
+        "com.androradar.livewallsg7",
+        "com.androradar.livewallsg8",
+        "com.androradar.livewallsg10",
+        "com.androradar.livewallsg16",
+        "com.pixsterstudio.gifmaker_editor_photo_gif_video",
+        "video.to.gif.maker",
+        "com.bk.videotogif",
+        "com.mike.gifmaker",
+        "gifmaker.gifcreator.gifeditor",
+        "com.monotype.android.font.kapp.custom_1714429462",
+        "com.csdeveloper.imgconverterpro",
+        "ru.tech.imageresizershrinker",
+        "com.spaceship.screen.textcopy",
+        "com.akbon.ios",
+        "cn.sealili.icons",
+        "co.livesatelliteview",
+        "com.screensavers_store.matrixlivewallpaper",
+        "mega.privacy.android.app",
+        "com.vpnbottle.melon.free.unblock.fast.vpn",
+        "com.mixplorer",
+        "com.mixplorer.beta",
+        "ru.gavrikov.mocklocations",
+        "com.hrd.motivation",
+        "com.motorola.wallpaper.parallaa",
+        "com.mxtech.videoplayer.ae",
+        "com.mxtech.videoplayer.pro",
+        "com.andatsoft.myapk.fwa",
+        "com.machiav3lli.fdroid",
+        "com.livewallpaper.opace5proBlack",
+        "ostrsf.ijmoeu.uircnu",
+        "in.pyshivam.clearappdata",
+        "com.ytheekshana.deviceinfo",
+        "ru.andr7e.deviceinfohw",
+        "com.fantasytat.det",
+        "me.yuki.folk",
+        "com.jazibkhan.equalizer",
+        "ropl.momo.item",
+        "me.neko.fckvip",
+        "com.secure.unblock.unlimited.proxy.vpnuk",
+        "free.vpnindia.unlimited.fast.secure.proxy.turbo",
+        "at.austriao.fake_gps_detector_app",
+        "com.fkjc.zcro",
+        "io.github.jqssun.gpssetter",
+        "ydyqb.kfqdjcxrr.b.s",
+        "com.android.lc",
+        "com.lizardCheats",
+        "com.accarunit.motionvideoeditor",
+        "app.greyshirts.firewall",
+        "yqheks.hcfaem.elmxyb",
+        "com.niksoftware.snapseed",
+        "dev.hexasoftware.v2box",
+        "com.resukisu.resukisu",
+        "io.ngankbakaa.lineage.detector",
+        "com.chuqniudetector",
+        "com.pyshivam.gplaylicense",
+        "com.aegis.apps",
+        "com.hydraultra.ipultrabox",
+        "com.hdobox.mudx",
+        "com.mediaon.apt",
+        "app.revanced.android.gms",
+        "pwyhpv.lkbxsq.opdmmq",
+        "com.security.xvpn.z35kb"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.studiowildcard.arkuse"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {
+        9997
+      },
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.fairplayshield.app"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = true,
+      ["hideSystemInstallationSource"] = true,
+      ["excludeTargetInstallationSource"] = true,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {
+        1015,
+        1023,
+        1032,
+        1077,
+        1078,
+        1079,
+        3003,
+        9997
+      },
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.microsoft.emmx"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "xuet.ahwmyctnhgbgf",
+        "bin.mt.plus",
+        "org.frknkrc44.hma_oss",
+        "com.mcdonalds.mobileapp",
+        "com.android.shell",
+        "org.akanework.checker"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["org.mozilla.firefox"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "xuet.ahwmyctnhgbgf",
+        "bin.mt.plus",
+        "org.frknkrc44.hma_oss",
+        "com.mcdonalds.mobileapp",
+        "com.android.shell",
+        "org.akanework.checker"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.linkedin.android"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "xuet.ahwmyctnhgbgf",
+        "bin.mt.plus",
+        "org.frknkrc44.hma_oss",
+        "com.mcdonalds.mobileapp",
+        "com.android.shell",
+        "org.akanework.checker"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.opera.browser"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "xuet.ahwmyctnhgbgf",
+        "bin.mt.plus",
+        "org.frknkrc44.hma_oss",
+        "com.mcdonalds.mobileapp",
+        "com.android.shell",
+        "org.akanework.checker"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.booking"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.android.vending"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "REVANCED"
+      },
+      ["applyPresets"] = {},
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {},
+      ["extraAppList"] = {
+        "com.google.android.youtube",
+        "com.google.android.apps.youtube.music",
+        "com.spotify.music",
+        "com.lemon.lvoverseas",
+        "com.reddit.frontpage",
+        "com.instagram.barcelona"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["ee.mtakso.driver"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["wu.keyChain.test"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.chuqniudetector"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.grubhub.driver"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {
+        "com.anydesk.adcontrol.ad1",
+        "com.anydesk.anydeskandroid",
+        "com.applisto.appcloner",
+        "io.github.jqssun.gpssetter",
+        "com.github.thepiemonster.hidemocklocation",
+        "io.github.auag0.hidemocklocation",
+        "org.frknkrc44.hma_oss",
+        "io.github.a13e300.ksuwebui"
+      },
+      ["extraOppositeAppList"] = {}
+    },
+    ["de.markusfisch.android.binaryeye"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.shipt.shopper"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.waze"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.levelinfinite.sgameGlobal"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    },
+    ["com.mada.madapay"] = {
+      ["useWhitelist"] = false,
+      ["excludeSystemApps"] = true,
+      ["hideInstallationSource"] = false,
+      ["hideSystemInstallationSource"] = false,
+      ["excludeTargetInstallationSource"] = false,
+      ["invertActivityLaunchProtection"] = false,
+      ["excludeVoldIsolation"] = false,
+      ["restrictedZygotePermissions"] = {},
+      ["applyTemplates"] = {
+        "HIDE MY CUSTOM APP"
+      },
+      ["applyPresets"] = {
+        "custom_rom",
+        "detector_apps",
+        "root_apps",
+        "shizuku_dhizuku",
+        "sus_apps",
+        "xposed"
+      },
+      ["applySettingTemplates"] = {},
+      ["applySettingsPresets"] = {
+        "accessibility",
+        "dev_options",
+        "input_method"
+      },
+      ["extraAppList"] = {},
+      ["extraOppositeAppList"] = {}
+    }
+  }
+}
+
+RoyalFix.State = {
+    Initialized = false,
+    Valid = false,
+    Errors = {},
+}
+
+local function addError(message)
+    RoyalFix.State.Errors[#RoyalFix.State.Errors + 1] = tostring(message)
+end
+
+local function isTable(v)
+    return type(v) == "table"
+end
+
+function RoyalFix.Validate()
+    RoyalFix.State.Errors = {}
+
+    if not isTable(RoyalFix.Config) then
+        addError("Config is not a table")
+    end
+
+    if RoyalFix.Config.configVersion == nil then
+        addError("Missing configVersion")
+    end
+
+    if type(RoyalFix.Config.scopes) ~= "table" and
+       type(RoyalFix.Config.scope) ~= "table" then
+        -- Some source variants use different scope layouts; this is
+        -- informational rather than a hard failure.
+    end
+
+    RoyalFix.State.Valid = (#RoyalFix.State.Errors == 0)
+    return RoyalFix.State.Valid, RoyalFix.State.Errors
+end
+
+function RoyalFix.Init()
+    local ok, errors = RoyalFix.Validate()
+    RoyalFix.State.Initialized = ok
+    return ok, errors
+end
+
+function RoyalFix.GetConfig()
+    return RoyalFix.Config
+end
+
+function RoyalFix.GetStatus()
+    return {
+        version = RoyalFix.VERSION,
+        sourceConfigVersion = RoyalFix.SOURCE_CONFIG_VERSION,
+        initialized = RoyalFix.State.Initialized,
+        valid = RoyalFix.State.Valid,
+        errorCount = #RoyalFix.State.Errors
+    }
+end
+
+function RoyalFix.GetErrors()
+    return RoyalFix.State.Errors
+end
+
+return RoyalFix
